@@ -93,6 +93,7 @@ func (l *List) Delete(ele *Element) bool {
 		}
 		if e.next == ele {
 			e.next = ele.next
+			ele = nil
 			l.len--
 			return true
 		}
